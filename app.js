@@ -131,6 +131,13 @@ function check(){
   console.log(random)
 }
 function Listy(){
+  const good = document.createElement("h1")
+  good.innerHTML = "Dobrze"
+  document.getElementById("goodAns").appendChild(good)
+  const bad = document.createElement("h1")
+  bad.innerHTML = "Złe"
+  document.getElementById("wrongAns").appendChild(bad)
+  document.getElementById("info").style.opacity=1
   for(var i=0;i<=dupArr.length-1;i++){
     if(dupArr[i].color=="green"){
       console.log(dupArr[i])
