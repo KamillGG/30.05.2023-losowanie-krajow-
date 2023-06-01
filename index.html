@@ -12,7 +12,18 @@
 </head>
 <body>
     <div id="map"></div>
-    <button id="start" onclick="start()">Start</button>
+    <div id="info">
+    <h1 id="good" class="contento"></h1>
+    <button id="start" onclick="start()" class="contento">Losuj</button>
+    <input type="text" id="input" style="visibility: hidden;" class="contento">
+    <button id="check" onclick="check()" style="visibility: hidden;" class="contento">Check</button>
+    <div id="lists">
+        <ul id="goodAns" style="color: green;"></ul>
+    <ul id="wrongAns" style="color: red;"></ul>
+    </div>
+    
+</div>
+<div id="EndgameCom"><h1>Wygrałeś</h1></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
