@@ -1,4 +1,7 @@
 var map = L.map('map').setView([51.9189046, 21.1343786], 7);
+map.dragging.disable()
+map.scrollWheelZoom.disable()
+map.doubleClickZoom.disable();
 var onlyOnce = true
 var points = 0
 var titleLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

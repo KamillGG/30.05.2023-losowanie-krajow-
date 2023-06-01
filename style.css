@@ -42,3 +42,6 @@ body{
     flex-direction: row;
     gap: 10px;
 }
+.leaflet-control-zoom{
+    visibility: hidden;
+}
