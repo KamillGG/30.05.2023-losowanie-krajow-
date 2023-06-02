@@ -6,16 +6,18 @@ var onlyOnce = true
 var points = 0
 var titleLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    className: "mapka"
 }).addTo(map);
 var dupArr = []
 var dupLen
 var random
 function start(){
   var tempObj
-  document.getElementById("start").style.visibility = "hidden"
-  document.getElementById("input").style.visibility = "visible"
-  document.getElementById("check").style.visibility = "visible"
+  document.getElementById("start").style.display = "none"
+  document.getElementById("input").style.display = "block"
+  document.getElementById("check").style.display = "block"
+  document.getElementById("input").value = ""
     map.eachLayer(function (layer) {
         if(layer != titleLayer)
         map.removeLayer(layer)
@@ -33,8 +35,8 @@ function start(){
           }
           document.getElementById("info").style.width = "100%"
           document.getElementById("good").innerHTML = "Koniec"
-          document.getElementById("check").style.visibility = "hidden"
-          document.getElementById("input").style.visibility = "hidden"
+          document.getElementById("check").style.display = "none"
+          document.getElementById("input").style.display = "none"
           random="none"
         } 
         else {
